@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:protonn_app_ui/screen/Publish_video_screen.dart';
+import 'package:protonn_app_ui/screen/Poblish_video_Screen/Publish_video_screen.dart';
+import 'package:protonn_app_ui/screen/Send_to_indivdual_Screen/Send_to_indivdual_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,7 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const PoblishVideosscreen(),
+      routes: {
+        '/': (context) => const PoblishVideoScreen(),
+        'SendtoIndivdualScreen': (context) => const SendtoIndivdualScreen()
+      },
     );
   }
 }
