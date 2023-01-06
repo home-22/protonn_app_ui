@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:protonn_app_ui/screen/Poblish_video_Screen/Publish_video_screen.dart';
 import 'package:protonn_app_ui/screen/Send_to_indivdual_Screen/Send_to_indivdual_screen.dart';
+import 'package:protonn_app_ui/screen/Shere_video_to_social_Screen/Share_video_to_social_Screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => const PoblishVideoScreen(),
-        'SendtoIndivdualScreen': (context) => const SendtoIndivdualScreen()
+        'SendtoIndivdualScreen': (context) => const SendtoIndivdualScreen(),
+        'SharevideotoScreen': (context) => const SherevideotosocialScreen(),
       },
     );
   }
