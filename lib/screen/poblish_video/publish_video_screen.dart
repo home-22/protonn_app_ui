@@ -12,22 +12,21 @@ class PoblishVideoScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.grey,
         elevation: 0,
-        leading: InkWell(
-          onTap: () {},
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Icon(
-              Icons.arrow_back_ios,
-              size: 25,
-              color: Colors.black54,
-            ),
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black54,
           ),
         ),
         centerTitle: true,
         title: const Text(
           'Publish video',
           style: TextStyle(
-              fontSize: 20, color: Colors.black, fontWeight: FontWeight.normal),
+            fontSize: 20,
+            color: Colors.black,
+            fontWeight: FontWeight.normal,
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -35,51 +34,48 @@ class PoblishVideoScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 0,
-                  vertical: 0,
+              Container(
+                height: 285,
+                width: 180,
+                decoration: BoxDecoration(
+                  image: const DecorationImage(
+                      image: AssetImage('assets/images/profile.png'),
+                      fit: BoxFit.cover),
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                child: Container(
-                  height: 285,
-                  width: 180,
-                  decoration: BoxDecoration(
-                    image: const DecorationImage(
-                        image: AssetImage('assets/images/profile1.jpg'),
-                        fit: BoxFit.cover),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 110),
-                        child: CircleAvatar(
-                          radius: 24,
-                          backgroundColor: Colors.black87.withOpacity(0.4),
-                          child: const Icon(Icons.play_arrow),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 110),
+                      child: CircleAvatar(
+                        radius: 24,
+                        backgroundColor: Colors.black87.withOpacity(0.4),
+                        child: const Icon(
+                          Icons.play_arrow,
+                          color: Colors.white,
+                          size: 27,
                         ),
                       ),
-                      const Spacer(),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 5),
-                        child: Container(
-                          height: 40,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.black87.withOpacity(0.3)),
-                          alignment: Alignment.center,
-                          child: const Text(
-                            'CHANGE THUMBNAIL',
-                            style:
-                                TextStyle(fontSize: 12, color: Colors.white60),
-                          ),
+                    ),
+                    const Spacer(),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      child: Container(
+                        height: 40,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.black.withOpacity(0.3)),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'CHANGE THUMBNAIL',
+                          style: TextStyle(fontSize: 12, color: Colors.white60),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               Padding(
@@ -133,11 +129,10 @@ class PoblishVideoScreen extends StatelessWidget {
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
-                    vertical: 0,
                     horizontal: 10,
                   ),
                   child: Container(
-                    height: 50,
+                    height: 45,
                     width: double.infinity,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
