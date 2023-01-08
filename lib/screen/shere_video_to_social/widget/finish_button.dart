@@ -11,7 +11,7 @@ class FinishButton extends StatelessWidget {
       },
       child: Container(
         height: 45,
-        margin: const EdgeInsets.symmetric(vertical: 10),
+        margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         width: double.infinity,
         alignment: Alignment.center,
         decoration: BoxDecoration(
